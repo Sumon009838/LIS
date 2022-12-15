@@ -1,0 +1,13 @@
+vector<ll>lis;
+void ok(ll val)
+{
+    if(lis.empty()||lis.back()<=val)
+    {
+        lis.push_back(val);
+    }
+    else
+    {
+        auto it=upper_bound(lis.begin(),lis.end(),val);
+        *it=val;
+    }
+}
